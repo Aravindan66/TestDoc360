@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string datestr = "09/18/2023";
+            CultureInfo culture = System.Globalization.CultureInfo.InvariantCulture;
+            DateTime date = DateTime.Parse(datestr, culture, DateTimeStyles.RoundtripKind);
+            Console.WriteLine("Date for the Culture:{0} - {1}",culture, date.ToString("f",culture));
+            Console.ReadLine();
+        }
+    }
+}
